@@ -1,6 +1,33 @@
 # homelab
 This is a repo I will use to share config files and so forth.
 
+## Proxmox server build
+
+This was my introduction to homelabing.
+
+
+### Hardware
+  
+  I used my old gaming pc as a the base for my server. 
+
+  * Asus motherboard
+  * i5 5500k cpu
+  * 970 GTX
+  * 850w PSU
+  * as well as 4 shucked HDD's
+
+### Services
+
+  * Ubuntu server (Nextcloud, Jellyfin, Docker) with the GPU passed through for hardware encoding
+  * Kali Linux VM to play with some hacking labs
+  * Truenas scale VM passing through the HDD's to set up a pool
+
+### NextCloud
+
+  This was my fist experience with nextcloud, I ended up spinning up a VM in Linode with a free trial. I bought a domain, and used cloudflare.
+
+  In the future I plan on creating a cloud storage that is accessable through VPN
+
 
 ## Setting up a Kubernetes cluster with referbished laptops
 
