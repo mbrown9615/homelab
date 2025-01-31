@@ -14,7 +14,7 @@ This was my introduction to homelabing.
   * i5 5500k cpu
   * 970 GTX
   * 850w PSU
-  * as well as 4 shucked HDD's
+  * as well as 4 shucked (8TB) HDD's
 
 ### Services
 
@@ -31,6 +31,15 @@ This was my introduction to homelabing.
 
 ## Setting up a Kubernetes cluster with referbished laptops
 
+## Hardware
+
+  (1) Dell Precision 6700
+  (3) HP Probook 640 G5
+        4 core i5-8365U 
+        16Gb Ram
+        500Gb NVME
+
+  
 ### Configuring the Laptops
 
   Install Ubuntu server on all laptops. I started by first changing the bios settings to suit linux. I dissabled secure boot and enabled legacy boot. While testing I did run into an issue where Linux couldn't detect the nvme drive. To get around this I flashed Windows onto the laptop and followed these steps:
@@ -46,7 +55,14 @@ This was my introduction to homelabing.
   * Now Linux should detect the drive
 
   Because I'm running this cluster on laptops, I would like them to function with the lid closed and not go to sleep, but still have the screen sleep so it's not on 24/7.
-
   
+  * Edit /etc/systemd/logind.conf
+  * HandleSuspendKey=ignore
+  * HandleLidSwitch=ignore
+  * HandleSwitchDocked=ignore
+  * sudo systemctl restart systemd-logind
+
+
+
 
 
